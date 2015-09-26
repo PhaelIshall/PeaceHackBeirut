@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html">
+  <title>Sign up</title>
+  <meta name="author" content="Jake Rocheleau">
+ 
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src= "home.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet'>
+    <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="home.css" rel="stylesheet">
+    
+  <link rel="shortcut icon" href="http://static.tmimgcdn.com/img/favicon.ico">
+  <link rel="icon" href="http://static.tmimgcdn.com/img/favicon.ico">
+  <link rel="stylesheet" type="text/css" media="all" href="signup.css">
+  
+  <script type="text/javascript" src="js/switchery.min.js"></script>
+</head>
+
+<div class="header">
+      <div class="container">
+        <a href="#" class="logo-icon">
+          <img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/logo.png">
+        </a>
+
+        <ul class="menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">People</a></li>
+          <li><a href="#">Donations</a></li>
+          <li><a href="#">Resources</a></li>
+          <li><a href="#">Contact us</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle">More <b class="caret"></b></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+        
+<form onSubmit="return false">
+  <div class="col-2">
+    <label>
+      Name
+      <input placeholder="What is your full name?" id="name" name="name" tabindex="1">
+    </label>
+  </div>
+  <div class="col-3">
+    <label>
+      Email
+      <input placeholder="What is your e-mail address?" id="email" name="email" tabindex="4">
+    </label>
+  </div>
+  <div class = "col-2">
+    <label for="password">Password:
+          <input placeholder = "***********" type="password" id="password" name="user_password">     
+    </label>
+  </div>    
+    <div class="col-3">
+      <label for="password"> Field of work: <br/>
+        
+        <label for="job">Field:</label>
+        <select tabindex= "5">
+          <option>Not specified</option>
+          <option>Business</option>
+          <option>Computer science</option>
+         <option >Travel and transportation</option>
+            <option> Health care</option>
+            <option>Education</option>
+            <option>Media</option>
+          </optgroup>
+          
+            <option>Construction</option>
+            <option>Religious and Ministry jobs</option>
+            <option>
+        </select>
+      
+  
+ </div>
+  <div class="col-3">
+    <label>
+      Phone Number
+      <input placeholder="What is the best # to reach you?" id="phone" name="phone" tabindex="3">
+    </label>
+  </div>
+  
+  <div class="col-3">
+    <label>
+      Availability
+      <select tabindex="5">
+        <option>5-15 hrs per week</option>
+        <option>15-30 hrs per week</option>
+        <option>30-40 hrs per week</option>
+      </select>
+    </label>
+  </div>
+ 
+  <div class="col-4">
+    <label>
+      Skills
+      <input placeholder="List a few of your primary skills" id="skills" name="skills" tabindex="6">
+    </label>
+  </div>
+
+  
+  <div class="col-4 switch">
+    <label>E-mail Updates?
+   <input placeholder= "Would you like to receive an email when a project of your interest is created on our website?" id="skills" name="skills" tabindex="6">
+    <center style="margin-bottom:8px;text-align: rigth"/> <input type="checkbox" class="js-switch"></center>
+    </label>
+  </div>
+ 
+  <div>
+    <button type= "button" >Submit Form</button>
+  </div>
+ 
+</form>
