@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="description" content="Awesome Bubble Navigation with jQuery" />
+        <meta name="keywords" content="jquery, circular menu, navigation, round, bubble"/>
+        <link rel="stylesheet" href="css2/style.css" type="text/css" media="screen"/>
+  <style>
+            {
+                margin:0;
+                padding:0;
+            }
+            body{
+                font-family:Arial;
+                background:#fff url(images/bg.png) no-repeat top left;
+            }
+            .title{
+                width:548px;
+                height:119px;
+                position:absolute;
+                top:400px;
+                left:150px;
+                background:transparent url(logedin.png) no-repeat top left;
+            }
+            a.back{
+                background:transparent url(back.png) no-repeat top left;
+                position:fixed;
+                width:150px;
+                height:27px;
+                outline:none;
+                bottom:0px;
+                left:0px;
+            }
+            #content{
+                margin:0 auto;
+            }
+
+
+        </style>
+    <title>Welcome</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/modern-business.css" rel="stylesheet">
+	    <link href="login.css" rel="stylesheet">
+
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+
+
+        <div class="header">
+      <div class="container">
+          <div id="img">
+          <img src="logo.png" width="101px" height="94px">
+		
+		  </div>
+          <ul class="menu">
+          <li><a href="home.html">Home</a></li>
+		  
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="people.html">People</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="home.html">About Us</a></li>
+          <li><a href="home.html">Contact Us</a></li>
+		  		  <li><a href="login.html" class="button"> Log Out :( </a></li>
+		   </ul>
+      </div>
+    </div>
+    
+    <body>
+        <div class= "all">
+             <div id="content">
+            <a class="back" href="http://tympanus.net/codrops/2010/04/29/awesome-bubble-navigation-with-jquery"></a>
+            <div class="title"></div>
+
+            <div class="navigation" id="nav">
+                <div class="item user">
+                    <img src="images/bg_user.png" alt="" width="199" height="199" class="circle"/>
+                    <a href="#" class="icon"></a>
+                    <h2>User</h2>
+                    <ul>
+                        <li><a href="#">Profile</a></li>
+                        <li><a href="#">Properties</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="item home">
+                    <img src="images/bg_home.png" alt="" width="199" height="199" class="circle"/>
+                    <a href="mpro.html" class="icon"></a>
+                    <h2>My Projects</h2>
+                    <ul>
+                        <li><a href="#">Mentor</a></li>
+                        <li><a href="#">Volunteering</a></li>
+                        <li><a href="#">Building</a></li>
+                    </ul>
+                </div>
+                <div class="item shop">
+                    <img src="images/bg_shop.png" alt="" width="199" height="199" class="circle"/>
+                    <a href="orglogin.html" class="icon"></a>
+                    <h2>Donations</h2>
+                    <ul>
+                        <li><a href="#">Rent</a></li>
+                        <li><a href="#">Take</a></li>
+                        <li><a href="#">Give</a></li>
+                    </ul>
+                </div>
+                <div class="item camera">
+                    <img src="images/bg_camera.png" alt="" width="199" height="199" class="circle"/>
+                    <a href="creat.html" class="icon"></a>
+                    <h2>Create</h2>
+					<ul>
+                        <li><a href="#">Project</a></li>
+                        <li><a href="#">Mentor</a></li>
+                        <li><a href="#">Volunteering</a></li>
+                    </ul>
+                    
+                </div>
+                <div class="item fav">
+                    <img src="images/bg_fav.png" alt="" width="199" height="199" class="circle"/>
+                    <a href="messages.html" class="icon"></a>
+                    <h2>Messsages</h2>
+                    <ul>
+                        <li><a href="#">Social</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Comments</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- The JavaScript -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script type="text/javascript" src="jquery.easing.1.3.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $('#nav > div').hover(
+                function () {
+                    var $this = $(this);
+                    $this.find('img').stop().animate({
+                        'width'     :'199px',
+                        'height'    :'199px',
+                        'top'       :'-25px',
+                        'left'      :'-25px',
+                        'opacity'   :'1.0'
+                    },500,'easeOutBack',function(){
+                        $(this).parent().find('ul').fadeIn(700);
+                    });
+
+                    $this.find('a:first,h2').addClass('active');
+                },
+                function () {
+                    var $this = $(this);
+                    $this.find('ul').fadeOut(500);
+                    $this.find('img').stop().animate({
+                        'width'     :'52px',
+                        'height'    :'52px',
+                        'top'       :'0px',
+                        'left'      :'0px',
+                        'opacity'   :'0.1'
+                    },5000,'easeOutBack');
+
+                    $this.find('a:first,h2').removeClass('active');
+                }
+            );
+            });
+        </script>
+    
+       
+			 
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Footer -->
+       
+
+    </div>
+    <!-- /.container -->
+</div>
+    
+
+</body>
+
+</html>
